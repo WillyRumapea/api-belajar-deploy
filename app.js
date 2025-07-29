@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 const data = require("./data.json");
 
 app.get("/", (req, res) => {
@@ -11,6 +11,6 @@ app.get("/list-name", (req, res) => {
   res.json(data);
 });
 
-app.listen(port, () => {
-  console.log(`Server running on: ${port}`);
+app.listen(PORT, () => {
+  console.log(`Server running on: ${PORT}`);
 });
