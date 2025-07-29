@@ -12,7 +12,8 @@ app.get("/list-name", (req, res) => {
 });
 
 console.log("PORT dari ENV:", process.env.PORT);
-
 app.listen(PORT, () => {
   console.log(`Server running on: ${PORT}`);
+  // Tambah setInterval buat tetap hidup
+  setInterval(() => console.log("App still running..."), 10000);
 });
